@@ -8,9 +8,14 @@ export const generateSummary = (data) => {
   const totalCollection = data.reduce((sum, d) => sum + d.collection_inr, 0);
 
   const cityStats = data.reduce((acc, curr) => {
-    if (!acc[curr.tenant]) acc[curr.tenant] = { collection: 0, count: 0 };
+    if (!acc[curr.tenant]) {
+      acc[curr.tenant] = { collection: 0, count: 0, approved: 0, rejected: 0, pending: 0 };
+    }
     acc[curr.tenant].collection += curr.collection_inr;
     acc[curr.tenant].count += 1;
+    if (curr.status === 'Approved') acc[curr.tenant].approved += 1;
+    else if (curr.status === 'Rejected') acc[curr.tenant].rejected += 1;
+    else if (curr.status === 'Pending') acc[curr.tenant].pending += 1;
     return acc;
   }, {});
 

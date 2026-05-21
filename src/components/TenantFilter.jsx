@@ -1,10 +1,10 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
 
-const CITIES = [
-  'All Cities', 'Delhi', 'Mumbai', 'Pune', 'Bengaluru', 'Chennai', 
-  'Hyderabad', 'Ahmedabad', 'Kolkata', 'Jaipur', 'Lucknow'
-];
+import propertiesData from '../data/properties.json';
+
+const uniqueCities = Array.from(new Set(propertiesData.map(p => p.tenant))).sort();
+const CITIES = ['All Cities', ...uniqueCities];
 
 const TenantFilter = ({ selectedTenant, onChange }) => {
   return (
