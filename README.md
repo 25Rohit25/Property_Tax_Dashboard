@@ -3,7 +3,7 @@
 A modern, AI-powered, and fully responsive Property Tax Analytics Dashboard built for the **NUDM Intern Assessment 2026** under the **UPYOG Multi-Tenant Platform**.
 
 🌐 **Live Demo:**  
-https://property-tax-dashboard-fa1p.vercel.app/
+https://property-tax-dashboard.vercel.app/
 
 ---
 
@@ -219,7 +219,7 @@ in your browser.
 ---
 
 🔗 Live Project:  
-https://property-tax-dashboard-fa1p.vercel.app/
+https://property-tax-dashboard.vercel.app/
 
 ---
 
